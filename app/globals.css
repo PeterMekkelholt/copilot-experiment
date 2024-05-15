@@ -17,17 +17,28 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-100;
 }
 
-@layer utilities {
+@layer base {
+  h1 {
+    @apply mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white;
+  }
+  h2 {
+    @apply text-3xl font-bold text-gray-800;
+  }
+  h3 {
+    @apply text-2xl font-bold text-gray-800;
+  }
+  h4 {
+    @apply text-xl font-bold text-gray-900;
+  }
+  p {
+    @apply mb-6 font-normal text-gray-500 dark:text-gray-400;
+  }
   .text-balance {
+  }
+  @layer utilities {
     text-wrap: balance;
   }
 }
